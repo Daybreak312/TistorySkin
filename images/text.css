@@ -1,0 +1,140 @@
+:root {
+    --font-extralight: "Pretendard ExtraLight", "Inter", "Serif";
+    --font-light: "Pretendard Light", "Inter", "Serif";
+    --font-regular: "Pretendard Regular", "Inter", "Serif";
+    --font-medium: "Pretendard Medium", "Inter", "Serif";
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (min-width: 1001px) {
+    --font-size-10px: 10px;
+    --font-size-12px: 12px;
+    --font-size-14px: 14px;
+    --font-size-16px: 16px;
+    --font-size-18px: 18px;
+    --font-size-20px: 20px;
+    --font-size-24px: 24px;
+    --font-size-30px: 30px;
+    --font-size-32px: 32px;
+    --font-size-36px: 36px;
+    --font-size-40px: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+    --font-size-10px: 30px;
+    --font-size-12px: 36px;
+    --font-size-14px: 42px;
+    --font-size-16px: 48px;
+    --font-size-18px: 54px;
+    --font-size-20px: 60px;
+    --font-size-24px: 24px;
+    --font-size-30px: 30px;
+    --font-size-32px: 32px;
+    --font-size-36px: 36px;
+    --font-size-40px: 40px;
+}
+
+p {
+    font-family: var(--font-regular);
+    font-size: 16px;
+    color: var(--text-color);
+    font-style: normal;
+    line-height: normal;
+    text-overflow: inherit;
+    overflow: inherit;
+    margin: 0;
+}
+
+.header-title-font {
+    font-family: var(--font-extralight);
+    font-size: var(--font-size-20px);
+}
+
+.header-menu-font {
+    font-family: var(--font-extralight);
+    font-size: var(--font-size-16px);
+}
+
+.sidebar-title-font {
+    font-family: var(--font-medium);
+    font-size: var(--font-size-20px);
+}
+
+.sidebar-content-font {
+    font-family: var(--font-medium);
+    font-size: var(--font-size-14px);
+}
+
+.home_title_text_1_font {
+    font-family: var(--font-medium);
+    font-size: var(--font-size-40px);
+}
+
+.home_title_text_2_font {
+    font-family: var(--font-light);
+    font-size: var(--font-size-20px);
+}
+
+.home_title_text_3_font {
+    font-family: var(--font-extralight);
+    font-size: var(--font-size-20px);
+}
+
+.home_posts_title_font {
+    font-family: var(--font-medium);
+    font-size: var(--font-size-36px);
+}
+
+.home_post_component_info_title_font {
+    font-family: var(--font-regular);
+    font-size: var(--font-size-16px);
+}
+
+.home_post_component_info_description_font {
+    font-family: var(--font-light);
+    font-size: var(--font-size-14px);
+    color: var(--subtext-2-color);
+}
+
+.post_title_font {
+    font-family: var(--font-medium);
+    font-size: var(--font-size-40px);
+}
+
+.post_description_font {
+    font-family: var(--font-light);
+    font-size: var(--font-size-20px);
+}
+
+.post_sidebar_post_info_title_font {
+    font-family: var(--font-regular);
+    font-size: var(--font-size-12px);
+}
+
+.post_sidebar_post_info_category_font {
+    font-family: var(--font-light);
+    font-size: var(--font-size-10px);
+    color: var(--subtext-1-color);
+}
+
+.post_sidebar_post_info_date_font {
+    font-family: var(--font-light);
+    font-size: var(--font-size-10px);
+    color: var(--subtext-2-color);
+}
+
+.post_quote_font {
+    font-family: "Malgun Gothic";
+    font-size: var(--font-size-20px);
+}
+
+.post_quoter_font {
+    font-family: var(--font-regular);
+    font-size: var(--font-size-16px);
+}

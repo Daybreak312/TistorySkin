@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>[##_page_title_##]</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="./images/text.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/hybrid.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        const quoteList = [
+            [
+                "\"401 Unauthorized\"<br>" +
+                "요청한 리소스에 대한 유효한 자격 증명이 없습니다.",
+                "HTTP Status Code, Unauthorized"
+            ],
+            [
+                "1. 하드웨어 : 사람이 발로 걷어찰 수 있는 부분",
+                "Jeff Pesis",
+                "프로그래머"
+            ],
+            [
+                "버클리가 만든 유명한 제품 두 개가 있다. 바로 LSD와 UNIX다.<br>" +
+                "이것은 도저히 우연의 일치라고 믿을 수 없다.",
+                "Jeremy S. Anderson",
+                "프로그래머"
+            ],
+            [
+                "복잡성을 통제하는 것이 컴퓨터 프로그래밍의 기초다.",
+                "Brian Kernighan",
+                "\"The C Programming Language\" 저자"
+            ],
+            [
+                "소프트웨어 설계를 잘하는 두 가지 방법이 있다.<br>" +
+                "첫째는 빠진 게 없는지 쉽게 확인할 수 있도록 최대한 단순하게 만드는 것이고,<br>" +
+                "둘째는 빠진 게 없는지 확인할 수 없도록 최대한 복잡하게 만드는 것이다.",
+                "C.A.R. Hoare",
+                "Quick Sort를 고안해낸 컴퓨터 과학자"
+            ],
+            [
+                "컴퓨터가 핸드폰과 비슷한 수준까지 쉬워지기를 바랐던 남자가 있었다.<br>" +
+                "그런데 전화기 사용법이 컴퓨터만큼 어려워지면서<br>" +
+                "그 소원이 자연스레 이루어지게 되었다.",
+                "Bjarne Stroustrup",
+                "C++ 발명가"
+            ],
+            [
+                "세상에는 딱 두 가지 프로그래밍 언어가 있다.<br>" +
+                "사람들이 욕하는 언어와 아무도 사용하지 않는 언어.",
+                "Bjarne Stroustrup",
+                "C++ 발명가"
+            ],
+            [
+                "훌륭한 기계공은 일반 기계공보다 몇배의 급여를 더 높이 받는다.<br>" +
+                "그러나 훌륭한 코드를 만들어내는 개발자는<br>" +
+                "일반적인 개발자보다 1만배 이상의 가치가 있다.",
+                "Bill Gates",
+                "마이크로소프트 설립자"
+            ],
+            [
+                "코드 수를 기준으로 프로그램 진척도를 측정하는 것은,<br>" +
+                "무게로 비행기 제작 진척도를 측정하는 것과 같다.",
+                "Bill Gates",
+                "마이크로소프트 설립자"
+            ],
+            [
+                "올바로 작동하지 않는다고 걱정하지 마라.<br>" +
+                "모든 게 잘 되었다면, 내가 할 일이 없어진다.",
+                "Mosher's Law of Software Engineering"
+            ],
+            [
+                "코딩이란, 사회 직업에서 도굴보다는 위이면서,<br>" +
+                "관리의 바로 밑 어디엔가 위치하는 직업이다.",
+                "Gerald Weinberg",
+                "컴퓨터 과학자"
+            ],
+            [
+                "Boolean이 좋은 건 당신이 설령 잘못했더라도<br>" +
+                "한 bit만 바꾸면 된다는 것이다.",
+                null
+            ],
+            [
+                "Array는 꼭 0이나 1에서 시작해야 하나?<br>" +
+                "내 생각에는 0.5에서 시작하면 어떨까?...<br>" +
+                "라는 내 의견은 충분한 검토 없이 기각된 것 같다.",
+                "Stan Kelly-Bootle",
+                "컴퓨터 과학자"
+            ],
+            [
+                "컴퓨터 언어를 만드는 건 공원을 산책하는 것과 같다.<br>" +
+                "\"쥬라기 공원!!!\"",
+                "Larry Wall",
+                "Perl 언어의 창시자"
+            ],
+            [
+                "로마 제국이 멸망한 이유 중 하나는 0이 없었기 때문이다.<br>" +
+                "그들은 C 프로그램의 종료를 제대로 표시할 방법이 없었다.",
+                "Robert Firth"
+            ],
+            [
+                "자바가 정말로 Garbage collection을 한다면,<br>" +
+                "대부분의 프로그램들은 실행 중에 자기 자신을 지워버릴지도 모른다.",
+                "Robert Sewell"
+            ],
+            [
+                "맞아요. 자바는 프로그래밍 언어가 보여줄 수 있는 아주 좋은 사례입니다.<br>" +
+                "그러나 자바 어플리케이션은 절대 그렇게 만들어선<br>" +
+                "안된다는 걸 말해주는 아주 좋은 사례입니다.",
+                "pixadel"
+            ],
+            [
+                "훌륭한 코드는 훌륭한 문서보다 낫다.",
+                "Steve McConnell",
+                "개발자"
+            ],
+            [
+                "만일 디버깅이 벌레를 잡는 과정이라면, 프로그래밍은 그걸 집어넣는 과정이다.",
+                "Edsger W. Dijkstra",
+                "컴퓨터 과학자"
+            ],
+            [
+                "네 컴퓨터에서 돌아가는 건 중요하지 않다.<br>" +
+                "네 컴퓨터로 서비스할 게 아니기 때문이다.",
+                "Vidiu Platon"
+            ],
+            [
+                "좋은 프로그래머 대부분은 돈이나 대중에게 받을<br>" +
+                "찬사를 기대하고 프로그래밍을 하지 않고 프로그래밍이 재미있어서 한다.",
+                "Linus Torvalds",
+                "리눅스 커널과 Git의 최초 개발자"
+            ]
+        ]
+
+        const poetList = [
+            [
+                1,
+                "가득 찬 고요함 속에서<br><br><br>" +
+                "저 하늘의, 가득 찬 고요 속에서<br><br>" +
+                "나는 저 어두운 우주를 밝게 빛추고 싶다<br><br>" +
+                "나는 갈 수 없겠지만, 그래도 나는 갈망한다<br><br>" +
+                "저 텅 빈 우주를, 나의 손으로 가득 채워보고 싶다"
+            ],
+            [
+                2,
+                "무너진 마음을 빗으며<br><br><br>" +
+                "저 나약한 마음이 위태롭게 서있다<br><br>" +
+                "조금만 긁어내면 버티지 못하고 무너질<br>" +
+                "저 모래같은 마음의 탑을<br><br>" +
+                "정성스레 쓰다듬으며 조금씩, 사라진 일부분을 채우며<br><br>" +
+                "다시 행복을 되찾았으면 한다"
+            ],
+            [
+                3,
+                "아름다운 지평선을 향해<br><br><br>" +
+                "가끔씩, 바다에 가고 싶다<br>" +
+                "아무것도 생각하지 않고, 그저 저 멀리를 바라보고 싶다<br><br>" +
+                "가끔씩, 북극에 가고 싶다<br>" +
+                "아무것도 생각하지 않고, 그저 저 하늘을 바라보고 싶다<br><br>" +
+                "가끔씩, 저 멀리 지평선에 가고 싶다<br>" +
+                "아무것도 생각하지 않고, 그저 저 길을 걷고 싶다<br><br>" +
+                "아무것도 생각하지 않고, 그저 아름다운 것들을 내 눈에 담고 싶다"
+            ]
+        ]
+    </script>
+</head>
+<body>
+<s_t3>
+    <!-- header -->
+    <header>
+        <a class="header-title" href="[##_blog_link_##]">
+            <img class="header-title-image" src="./images/tistory_icon.png" alt="[ 티스토리 ]" width="30">
+            <p class="header-title-font">[##_title_##]</p>
+        </a>
+        <div class="header-menu">
+            <a class="header-menu-component" href="[##_blog_link_##]">
+                <img src="./images/home.svg" alt="home">
+                <p class="header-menu-font">홈</p>
+            </a>
+            <a class="header-menu-component" href="[##_taglog_link_##]">
+                <img src="./images/tags.svg" alt="tags">
+                <p class="header-menu-font">태그</p>
+            </a>
+            <a class="header-menu-component" href="[##_guestbook_link_##]">
+                <img src="./images/guestbook.svg" alt="guestbook">
+                <p class="header-menu-font">방명록</p>
+            </a>
+            <a class="header-menu-component" href="[##_blog_link_##]manage">
+                <img src="./images/manage.svg" alt="manage">
+                <p class="header-menu-font">관리</p>
+            </a>
+            <div class="header-menu-component">
+                <img src="./images/profile.svg" alt="profile">
+                <p class="header-menu-font">프로필</p>
+            </div>
+        </div>
+    </header>
+
+    [##_revenue_list_upper_##]
+
+    <main>
+
+        <!-- 홈 -->
+        <s_cover_group>
+
+            <s_cover_rep>
+
+                <!-- 홈 타이틀 -->
+                <s_cover name="blog_info">
+                    <div class="home_title">
+                        <div class="home_title_text">
+                            <p class="home_title_text_1_font">[##_title_##]</p>
+                            <div class="home_title_text_tab">
+                                <p class="home_title_text_2_font">[##_desc_##]</p>
+                                <div class="home_title_text_tab">
+                                    <p class="home_title_text_3_font">[##_blogger_##]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home_title_image"
+                             style="background: linear-gradient(rgba(45, 45, 45, 0.8), rgba(45, 45, 45, 0.5), rgba(45, 45, 45, 0.8)), url(./images/bochi.png); background-size: cover; background-position: center"></div>
+                    </div>
+                </s_cover>
+
+                <!-- 인기 글 -->
+                <s_cover name="popular_posts">
+                    <div class="home_posts">
+                        <div class="home_posts_title">
+                            <p class="home_posts_title_font">[##_cover_title_##]</p>
+                        </div>
+                        <div class="home_posts_content">
+                            <s_cover_item>
+                                <s_cover_item_article_info>
+                                    <a class="home_post_component" href="[##_cover_item_url_##]">
+                                        <div class="home_post_component_image">
+                                            <s_cover_item_thumbnail>
+                                                <div class="home_post_component_image"
+                                                     style=" background: linear-gradient(180deg, rgba(44, 44, 44, 0.51) 0%, #2C2C2C 100%), url([##_cover_item_thumbnail_##]); background-size: cover; background-position: center">
+                                                </div>
+                                            </s_cover_item_thumbnail>
+                                        </div>
+                                        <div class="home_post_component_info">
+                                            <div class="home_post_component_info_title">
+                                                <p class="home_post_component_info_title_font">
+                                                    [##_cover_item_title_##]
+                                                </p>
+                                            </div>
+                                            <div class="home_post_component_info_description">
+                                                <p class="home_post_component_info_description_font">
+                                                    [##_cover_item_category_##]
+                                                </p>
+                                                <p class="home_post_component_info_description_font">
+                                                    [##_cover_item_simple_date_##]
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </s_cover_item_article_info>
+                            </s_cover_item>
+                        </div>
+                    </div>
+                </s_cover>
+
+                <!-- 홈 문학 -->
+                <s_cover name="poets">
+                    <div class="home_poets">
+                        <div class="home_poet_component">
+                            <p class="home_poet_title_font"></p>
+                            <p class="home_poet_content_font"></p>
+                        </div>
+                        <div class="home_poet_component">
+                            <p class="home_poet_title_font"></p>
+                            <p class="home_poet_content_font"></p>
+                        </div>
+                        <div class="home_poet_component">
+                            <p class="home_poet_title_font"></p>
+                            <p class="home_poet_content_font"></p>
+                        </div>
+                    </div>
+                    <script>
+                        const poets = document.querySelector(".home_poets")
+                        const usedPoetList = []
+
+                        for (let i = 0; i < 3; i++) {
+                            const component = poets.children.item(i)
+
+                            let poetContent
+                            while (true) {
+                                poetContent = poetList[Math.floor(Math.random() * poetList.length)]
+
+                                if (!usedPoetList.includes(poetContent[0])) {
+                                    break
+                                }
+                            }
+
+                            component.children.item(0).innerHTML = `| ${poetContent[0]}`
+                            component.children.item(1).innerHTML = poetContent[1]
+
+                            usedPoetList.push(poetContent[0])
+                        }
+                    </script>
+                </s_cover>
+
+            </s_cover_rep>
+
+        </s_cover_group>
+
+        <!-- 글 조회에만 있는 좌측 사이드바 -->
+        <div class="post_sidebar">
+            <s_sidebar>
+
+                <!-- 공지 사항 -->
+                <s_sidebar_element>
+                    <!-- 공지 사항 -->
+                    <div class="sidebar-component">
+                        <p class="sidebar-title-font">공지 사항</p>
+                        <s_rct_notice>
+                            <div class="sidebar-content">
+                                <s_rct_notice_rep>
+                                    <a class="latest-notice-component" href="[##_notice_rep_link_##]">
+                                        <img src="./images/notice.svg" alt="notice">
+                                        <p class="post_sidebar_post_info_title_font">
+                                            [##_notice_rep_title_##]
+                                        </p>
+                                    </a>
+                                </s_rct_notice_rep>
+                            </div>
+                        </s_rct_notice>
+                    </div>
+                </s_sidebar_element>
+
+                <!-- 인기 글 -->
+                <s_sidebar_element>
+                    <!-- 인기 글 -->
+                    <div class="sidebar-component">
+                        <p class="sidebar-title-font">인기 글</p>
+                        <div class="sidebar-content">
+                            <s_rctps_popular_rep>
+                                <a href="[##_rctps_rep_link_##]">
+                                    <div class="post_sidebar_post">
+                                        <s_rctps_rep_thumbnail>
+                                            <img class="post_sidebar_post_image"
+                                                 src="[##_rctps_rep_thumbnail_##]"
+                                                 alt="img">
+                                        </s_rctps_rep_thumbnail>
+                                        <div class="post_sidebar_post_info">
+                                            <p class="post_sidebar_post_info_title_font">
+                                                [##_rctps_rep_title_##]
+                                            </p>
+                                            <p class="post_sidebar_post_info_category_font">
+                                                [##_rctps_rep_category_##]
+                                            </p>
+                                            <p class="post_sidebar_post_info_date_font">
+                                                [##_rctps_rep_simple_date_##]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </s_rctps_popular_rep>
+                        </div>
+                    </div>
+                </s_sidebar_element>
+
+                <!-- 최신 글 -->
+                <s_sidebar_element>
+                    <!-- 최신 글 -->
+                    <div class="sidebar-component">
+                        <p class="sidebar-title-font">최신 글</p>
+                        <div class="sidebar-content">
+                            <s_rctps_rep>
+                                <a href="[##_rctps_rep_link_##]">
+                                    <div class="post_sidebar_post">
+                                        <s_rctps_rep_thumbnail>
+                                            <img class="post_sidebar_post_image"
+                                                 src="[##_rctps_rep_thumbnail_##]"
+                                                 alt="img">
+                                        </s_rctps_rep_thumbnail>
+                                        <div class="post_sidebar_post_info">
+                                            <p class="post_sidebar_post_info_title_font">
+                                                [##_rctps_rep_title_##]
+                                            </p>
+                                            <p class="post_sidebar_post_info_category_font">
+                                                [##_rctps_rep_category_##]
+                                            </p>
+                                            <p class="post_sidebar_post_info_date_font">
+                                                [##_rctps_rep_simple_date_##]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </s_rctps_rep>
+                        </div>
+                    </div>
+                </s_sidebar_element>
+
+            </s_sidebar>
+        </div>
+
+        <script>
+            if ("[##_body_id_##]" != "tt-body-page") {
+                document.querySelector(".post_sidebar").remove()
+            }
+        </script>
+
+        <!-- 글 -->
+        <s_article_rep>
+
+            <!-- 뭔지 모르겠음 -->
+            <s_page_rep>
+                <h1>s_page_rep</h1>
+            </s_page_rep>
+
+            <!-- 단일 글 -->
+            <s_permalink_article_rep>
+
+                <!-- 글 커버 이미지, 글 제목, 생성일, 카테고리 등-->
+                <div class="post_info">
+                    <!-- 글 커버 이미지 -->
+                    <s_article_rep_thumbnail>
+                        <div class="post_info_image"
+                             style=" background: linear-gradient(180deg, rgba(44, 44, 44, 0.51) 0%, #2C2C2C 100%), url([##_article_rep_thumbnail_url_##]); background-size: cover; background-position: center"></div>
+                    </s_article_rep_thumbnail>
+                    <!-- 글 제목, 생성일, 카테고리 -->
+                    <div class="post_title">
+                        <p class="post_title_font">[##_article_rep_title_##]</p>
+                        <div class="post_description">
+                            <p class="post_description_font">[##_article_rep_simple_date_##]</p>
+                            <p class="post_description_font">[##_article_rep_category_##]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 글 요소들 (사이드바, 본문 등) -->
+                <div class="post_content">
+
+                    <div class="post_main">
+
+                        <!-- 글 인용구 -->
+                        <div class="post_quote_static" onclick="refreshQuote()">
+                            <div class="post_quote_content">
+                                <div class="post_quote">
+                                    <p class="post_quote_font" align="center"></p>
+                                </div>
+                                <div class="post_quoter">
+                                    <p class="post_quoter_font" align="center"></p>
+                                    <p class="post_quoter_description_font" align="center"></p>
+                                </div>
+                                <script>
+                                    function insertQuote() {
+
+                                        const quote = quoteList[Math.floor(Math.random() * quoteList.length)]
+                                        const quoteSection = document.querySelector(".post_quote_font")
+                                        quoteSection.innerHTML = quote[0]
+
+                                        const quoterSection = document.querySelector(".post_quoter_font")
+                                        if (quote[1] != null) {
+                                            quoterSection.innerHTML = "- " + quote[1]
+                                        } else {
+                                            quoterSection.innerHTML = null
+                                        }
+
+                                        const quoterDescriptionSection = document.querySelector(".post_quoter_description_font")
+                                        if (quote[2] != null) {
+                                            quoterDescriptionSection.innerHTML = quote[2]
+                                        } else {
+                                            quoterDescriptionSection.innerHTML = null
+                                        }
+                                    }
+
+                                    insertQuote()
+                                </script>
+                            </div>
+                        </div>
+
+                        <script>
+                            function refreshQuote() {
+                                insertQuote()
+                            }
+                        </script>
+
+                        <!-- 본문 -->
+                        <div class="post_text">
+                            [##_article_rep_desc_##]
+                        </div>
+
+                        <script>
+                            const utils = document.querySelector('.postbtn_like')
+                            const button = document.querySelector('.btn_post.uoc-icon')
+                            const like = document.querySelector('div.uoc-icon')
+                            const spanLikeIcon = document.querySelector('.ico_postbtn.ico_like')
+                            const spanLikeText = document.querySelector('.txt_like.uoc-count')
+
+                            utils.style.display = "flex"
+                            utils.style.flexDirection = "row"
+                            utils.style.gap = "10px"
+                            utils.style.width = "auto"
+
+                            button.style.width = "auto"
+                            button.parentElement.style.width = "auto"
+
+                            like.style.display = "flex"
+                            like.style.flexDirection = "row"
+                            like.style.width = "auto"
+                            like.style.alignItems = "center"
+
+                            spanLikeIcon.style.width = "15px"
+                            spanLikeText.style.width = "15px"
+                            spanLikeText.style.whiteSpace = "nowrap"
+                        </script>
+
+                        <!-- 공감, 공유 등 -->
+                        <div class="post_util">
+                            [##_article_rep_rp_link_##]
+                        </div>
+                    </div>
+
+                    <!-- 우측 사이드바 -->
+                    <div class="post_sidebar_right">
+                        <s_sidebar>
+
+                            <!-- 프로필 -->
+                            <s_sidebar_element>
+                                <div class="sidebar-component">
+                                    <div class="sidebar-profile">
+                                        <div class="sidebar-profile-image"
+                                             style="background: url(./images/daybreak.jpg); background-size: cover; background-position: center                                        ">
+                                        </div>
+                                        <p class="sidebar-title-font">[##_blogger_##]</p>
+                                    </div>
+                                    <div class="sidebar-content">
+                                        <p class="sidebar-content-font">전체 방문자 수 : [##_count_total_##]</p>
+                                        <p class="sidebar-content-font">오늘 방문자 수 : [##_count_today_##]</p>
+                                        <p class="sidebar-content-font">어제 방문자 수 : [##_count_yesterday_##]</p>
+                                    </div>
+                                </div>
+                            </s_sidebar_element>
+
+                            <!-- 검색 -->
+                            <s_sidebar_element>
+                                <div class="sidebar-component">
+                                    <p class="sidebar-title-font">검색</p>
+                                    <div class="sidebar-content">
+                                        검색창이에용
+                                    </div>
+                                </div>
+                            </s_sidebar_element>
+
+                        </s_sidebar>
+                    </div>
+
+                    <script>
+                        const leftSidebar = document.querySelector(".post_sidebar")
+                        const rightSidebar = document.querySelector(".post_sidebar_right")
+                        const main = document.querySelector(".post_main")
+
+                        if ("[##_body_id_##]" == "tt-body-page") {
+                            window.addEventListener(`resize`, updateSidebarVisibility)
+                            window.addEventListener(`load`, loadSidebar)
+                        }
+
+                        function loadSidebar() {
+                            window.removeEventListener(`load`, loadSidebar)
+
+                            updateSidebarVisibility()
+                        }
+
+                        function updateSidebarVisibility() {
+
+                            if (getNumInXXXpx(getComputedStyle(leftSidebar).width)
+                                + getNumInXXXpx(getComputedStyle(rightSidebar).width)
+                                + getNumInXXXpx(getComputedStyle(main).width) >= window.innerWidth - 150
+                            ) {
+                                leftSidebar.style.visibility = "hidden"
+                                rightSidebar.style.visibility = "hidden"
+                            } else {
+                                leftSidebar.style.visibility = "visible"
+                                rightSidebar.style.visibility = "visible"
+                            }
+                        }
+
+                        function getNumInXXXpx(string) {
+                            return string.slice(0, string.length - 2)
+                        }
+                    </script>
+                </div>
+            </s_permalink_article_rep>
+        </s_article_rep>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-line">
+            <div class="footer-line-inner"></div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-content-itsme">
+                <p class="footer-font">Daybreak | Daybreak312</p>
+                <p class="footer-font">Designed By Daybreak312</p>
+                <p class="footer-font">© 2024 Daybreak312 All pictures cannot be copied without permission.</p>
+            </div>
+            <div class="footer-content-contact">
+                <a href="https://github.com/Daybreak312" target="_blank">
+                    <div class="footer-content-contact-component">
+                        <img src="./images/github.png">
+                        <p class="footer-font">Daybreak312</p>
+                    </div>
+                </a>
+                <a href="mailto:leetyxodud312@gmail.com">
+                    <div class="footer-content-contact-component">
+                        <img src="./images/gmail.svg">
+                        <p class="footer-font">leetyxodud312@gmail.com</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+</s_t3>
+<script>
+
+    // put sidebar when this is post page
+    let sidebar = document.querySelector('.post_sidebar')
+    let postContent = document.querySelector('.post_content')
+
+    sidebar.style.display = 'flex'
+    sidebar.style.flexDirection = 'column'
+    sidebar.style.alignItems = 'flex-start'
+    sidebar.style.gap = '10px'
+
+    postContent.prepend(sidebar)
+
+    // code block
+    let codes = document.querySelectorAll('code');
+
+    codes.forEach(function (it) {
+        it.style.whiteSpace = 'pre';
+        it.style.fontFamily = 'Jetbrains Mono';
+        it.style.fontSize = '14px';
+    })
+</script>
+</body>
+</html>

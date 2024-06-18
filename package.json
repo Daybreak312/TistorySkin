@@ -1,0 +1,41 @@
+[
+  {
+    "name": "blog_info",
+    "title": "",
+    "dataType": "CUSTOM",
+    "data": [
+      {
+        "title": "home_title",
+        "summary": "summary",
+        "url": "",
+        "thumbnail": ""
+      }
+    ]
+  },
+  {
+    "name": "popular_posts",
+    "title": "",
+    "dataType": "CUSTOM",
+    "data": [
+      {
+        "title": "popular_posts",
+        "summary": "summary",
+        "url": "",
+        "thumbnail": ""
+      }
+    ]
+  },
+  {
+    "name": "poets",
+    "title": "",
+    "dataType": "CUSTOM",
+    "data": [
+      {
+        "title": "poets",
+        "summary": "summary",
+        "url": "",
+        "thumbnail": ""
+      }
+    ]
+  }
+]

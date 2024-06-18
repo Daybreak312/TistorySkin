@@ -1,0 +1,79 @@
+<skin>
+    <information>
+        <name>새벽에 쓰인 시</name>
+        <version>1.0</version>
+        <description>
+
+        </description>
+        <license>
+            <![CDATA[저작권자의 허락 하에 수정 및 재배포가 가능합니다.]]>
+        </license>
+    </information>
+    <author>
+        <name>Daybreak312</name>
+        <homepage>https://daybreak312.tistory.com</homepage>
+        <email>leetyxodud312@gmail.com</email>
+    </author>
+    <defalut>
+        <cover>
+            [
+            {
+            "name": "blog_info",
+            "title": "",
+            "dataType": "CUSTOM",
+            "data": [
+            {
+            "title": "home_title",
+            "summary": "summary",
+            "url": "",
+            "thumbnail": ""
+            }
+            ]
+            },
+            {
+            "name": "popular_posts",
+            "title": "",
+            "dataType": "CUSTOM",
+            "data": [
+            {
+            "title": "popular_posts",
+            "summary": "summary",
+            "url": "",
+            "thumbnail": ""
+            }
+            ]
+            },
+            {
+            "name": "poets",
+            "title": "",
+            "dataType": "CUSTOM",
+            "data": [
+            {
+            "title": "poets",
+            "summary": "summary",
+            "url": "",
+            "thumbnail": ""
+            }
+            ]
+            }
+            ]
+        </cover>
+    </defalut>
+    <cover>
+        <item>
+            <name>blog_info</name>
+            <label>Blog Info</label>
+            <description><![CDATA[블로그 정보]]></description>
+        </item>
+        <item>
+            <name>popular_posts</name>
+            <label>Popular Posts</label>
+            <description><![CDATA[인기글 목록]]></description>
+        </item>
+        <item>
+            <name>poets</name>
+            <label>Poets</label>
+            <description><![CDATA[문학들]]></description>
+        </item>
+    </cover>
+</skin>
